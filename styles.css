@@ -1,0 +1,522 @@
+:root {
+  --max-site-width: 1280px;
+}
+
+body {
+	padding: 0px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12pt;
+	background-color: white;
+	color: #484848;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+
+p {
+    margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+p + p {
+	margin-top: 20px;
+}
+
+#page {
+	max-width: var(--max-site-width);
+	background-color: white;
+	margin: auto;
+}
+
+#header {
+	display:inline-flex;
+	max-width: var(--max-site-width);
+	text-align: center;
+	background: white;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+  	top: 0;
+  	width: 100%;
+}
+
+#header-sm-icons{
+	display: none;
+}
+
+
+#header-image {
+	z-index: 8;
+}
+
+#header-image img {
+	width: 200px;
+	padding: 20px;
+}
+
+#header-menu-icon {
+	display:none;
+	font-size: 14pt;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	padding-top: 10px;
+}
+
+#menu-close-icon{
+	display:none;
+	color:silver;
+}
+
+#header-menu-icon a {
+	text-decoration: none;
+	font-size: 12pt; 
+	font-weight:bold;
+	padding: 20px;
+}
+
+#header-menu-icon a:hover {
+	cursor: pointer;
+	font-size: 12pt; 
+	font-weight:bold;
+	color: #cc0000;
+}
+
+#header-menu {
+    text-align: right;
+    right: 0;
+    position: absolute;
+    padding: 20px;
+}
+
+.menu-item {
+	display: inline-block;
+	color: #464646;
+	text-decoration: none;
+	font-size: 10pt; 
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.menu-item:hover {
+ 	color: #cc0000;
+}
+
+
+/* 
+***********************************************
+Responsive Header & Menu
+************************************************/
+
+/*
+This in here in the event of a resizing 
+and menu interactions that may leave the 
+menu hidden.
+*/
+@media (min-width: 750px) {
+
+	#header-menu {
+		display: inline-block !important;
+		width: 100% !important;
+		transition: 0s !important;
+	}
+}
+
+/* If screen bigger than 1280px, add borders to page.*/
+@media (min-width: 1280px) {
+	#page {
+	    border-left: .5px silver solid; 
+	    border-right: .5px silver solid;
+	}
+}
+
+@media (max-width: 750px) {
+
+	#header-image {
+		margin: auto;
+	}
+
+	#header-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+	    width: 0;
+	    text-align: left;
+	    background: black;
+	    padding-top: 55px;
+	    padding-bottom: 20px;
+  		padding-left: 0px;
+  		padding-right: 0px;
+	    z-index: 9;	
+	    color: silver;
+    	/*transition: 0.5s;*/
+    }
+
+    #header-menu-icon {
+		display: flex;
+	}
+
+	#header-sm-icons{
+		width: 150px;
+		display: block;
+	}
+
+	.menu-item {
+		font-size: 12pt;
+		width: 150px;
+		display:block;
+		color: silver;
+		padding-left: 30px;
+	}
+
+	.menu-initial {
+		width: 0;
+	}
+}
+
+/* 
+***********************************************
+Slide Show
+***********************************************
+*/
+
+#slideshow {
+	opacity: 1.0;              /* CSS3 */
+	-moz-opacity: 1.0;         /* Older versions of Firefox */
+	-khtml-opacity: 1.0;       /* Older versions of Safari */
+	filter: alpha(opacity=100); /* Internet Explorer */
+}
+#slideshow div {
+	display:none;
+}
+#slideshow #slice1 {
+	display:block; 
+	width:100%; 
+}
+
+
+/* 
+***********************************************
+Content layout
+***********************************************
+*/
+
+#content {
+	padding-top: 91px;
+}
+
+.section {
+	display: none;
+	padding: 0px;
+	padding-bottom: 20px;
+}
+
+.sub-section-white {
+	background-color: white;
+	max-width: 100%;
+}
+
+.sub-section-gray {
+	background-color: #EEF2F7;
+	max-width: 100%;
+}
+
+.section-title {
+	font-size: 16pt;
+	color:#bb2921;
+	text-align: center;
+	padding: 25px;
+	text-transform: uppercase;
+}
+
+.section-subtitle{
+	text-align: center;
+	padding: 10px 0px;
+	color:#bb2921;
+	text-transform: uppercase;
+}
+
+.section-text {
+	padding: 10px;
+	width: 90%;
+	max-width: 800px; 
+	margin: auto;
+}
+
+.section-text-narrow {
+	padding: 10px;
+	width: 90%;
+	max-width: 700px; 
+	margin: auto;
+}
+
+.section-text-wide {
+	padding: 0px 0px 20px 0px;
+	width: 100%;
+	max-width: 900px; 
+	margin: auto;
+}
+
+.section-text-block {
+	display: inline-block;
+	margin: auto;
+	vertical-align: top;
+	width: 45%;
+}
+
+.img-float-left {
+	float: left;
+	margin-right: 25px;
+	margin-bottom: 10px;
+}
+
+.img-float-right {
+	float: right;
+	margin-left: 25px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+	.section-text-block {
+		width: 100%;
+	}
+
+	.img-float-left, .img-float-right {
+		float: none;
+	    clear: all;
+	    margin-left: 0;
+	    margin-right: 0;
+	    width: 100%;
+	    text-align: center;
+	}
+
+}
+
+.class-offering {
+	text-align: left;
+    width: 100%;
+    max-width: 250px;
+    padding: 20px 15px 15px 15px;
+    /* max-width: 200px; */
+    box-shadow: 0 2px 10px -1px grey;
+    height: 170px;
+    /* background: white; */
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 400px) {
+	.class-offering {
+		max-width: 325px;
+		padding: 20px 15px;
+		margin: 0px 0px 20px 0px;
+		height: unset;
+	}
+}
+
+.class-name {
+	font-style: italic;
+    color: #b90000;
+    text-transform: uppercase;
+    border-bottom: 1px solid red;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.class-detail {
+	width: 100%;
+	font-size: 11pt;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 12px;
+}
+
+
+/***********************************************
+Schedule iframe 
+***********************************************/
+#schedule-container {
+    text-align: center;
+    overflow: hidden;
+    height: 300px;
+    margin: 0;
+
+}
+
+#schedule-iframe{
+    margin: 0;
+    max-width: 800px;
+    width: 100%;
+    height: 400px;
+    border: 0;
+    padding: 0 0 0 0;
+  
+}  
+
+@media screen and (max-width: 400px) {
+
+   #schedule-iframe, #schedule-container{
+      height: 350px;
+     }
+
+	#schedule-section {
+		padding:0;
+	}
+ }
+
+
+/***********************************************
+Because we have a fixed header, we had to create
+a hidden anchor to offset the scrolling so none
+of the content would be blocked.
+***********************************************/
+.hidden-anchor {
+	display: block;
+    position: relative;
+    top: -90px;
+    
+}
+
+#mapContainer {
+	width: 95%;
+    margin: auto;
+}
+
+#private-classes {
+	background-color: #EEF2F7;
+}
+
+.section {
+	display: none;
+}
+
+.text-button {
+	display: inline-block;
+	background-color: green;
+    width: 130px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white; 
+    text-align: center;
+	font-size: 9pt;
+    text-transform: uppercase;
+}
+
+.link-to-page {
+	width: 100%;
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+}
+
+.link-to-page-img img {
+	width: 100%;
+}
+
+.learn-more-link {
+	color: green;
+    font-style: italic;
+	padding-top: 10px;
+	font-size: small;
+    font-weight: bold;
+}
+
+.learn-more-link:hover {
+	color: green;
+}
+
+
+#private-lessons-list {
+	display: block;
+    max-width: 600px;
+    margin: auto;
+	padding: 0px 10px;
+}
+
+#private-lessons-list ul ::marker {
+	color: #bb2921;
+}
+
+#private-lessons-list ul li {
+	padding: 10px;
+}
+
+
+.image-group {
+	text-align: center;
+	margin: auto;
+	padding: 20px 0px;
+
+}
+
+.image-group img {
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
+}
+
+/***********************************************
+This is so the footer prints with inverted colors.
+***********************************************/
+@media print
+{    
+	#footer {
+		display: block;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		background-color: white;
+		color: #484848;;
+		padding-top: 10px;
+		padding-bottom: 2px;
+		font-size: 12px;
+		line-height: 1;
+		border-top: 0.5px solid silver;
+	}
+
+	.img-float-left {
+		float: left;
+		margin-right: 25px;
+		margin-bottom: 10px;
+	}
+	
+	.img-float-right {
+		float: right;
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}
+
+	.pageBreakSection {
+		page-break-before: always;
+		padding-top: 90px;
+		background-color: white;
+	}
+
+	.no-print {
+		display:none;
+	}
+}
