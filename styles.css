@@ -359,7 +359,7 @@ Schedule iframe
 #schedule-container {
     text-align: center;
     overflow: hidden;
-    height: 300px;
+    height: 500px;
     margin: 0;
 
 }
@@ -368,7 +368,7 @@ Schedule iframe
     margin: 0;
     max-width: 800px;
     width: 100%;
-    height: 400px;
+    height: 100vh;
     border: 0;
     padding: 0 0 0 0;
   
@@ -377,7 +377,7 @@ Schedule iframe
 @media screen and (max-width: 400px) {
 
    #schedule-iframe, #schedule-container{
-      height: 350px;
+      /*height: 350px;*/
      }
 
 	#schedule-section {
