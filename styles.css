@@ -1,4 +1,3 @@
-
 body {
 	padding: 0px;
 	margin: auto;
@@ -364,10 +363,6 @@ Schedule iframe
 }  
 
 @media screen and (max-width: 400px) {
-
-	#schedule-iframe, #schedule-container{
-	/*height: 350px;*/
-	}
 
 	#schedule-section {
 		padding:0;
