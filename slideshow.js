@@ -7,8 +7,8 @@ var showtime = 2500; /* time to stay visible */
 var running = 0 /* Used to check if fade is running */
 var iEcount = 1 /* Element Counter */
 
-var iTotalE = element.getElementsByTagName('div').length;
-
+var slideshowImages = element.getElementsByTagName('div');
+var iTotalE = slideshowImages.length;
 
 function SetOpa(Opa) {
   element.style.opacity = Opa;
@@ -32,15 +32,20 @@ function FadeIn() {
   for (i = 0; i <= 1; i += 0.01) {
     setTimeout("SetOpa(" + i +")", i * duration);
   }
-   if (iEcount == iTotalE) {
-    iEcount = 1
-    document.getElementById("slice" + iEcount).style.display = "block";
-    document.getElementById("slice" + iTotalE).style.display = "none";
-   } else {
-    document.getElementById("slice" + (iEcount + 1)).style.display = "block";
-    document.getElementById("slice" + iEcount).style.display = "none";
-    iEcount = iEcount+1
-   }
+
+  if (iEcount == iTotalE) {
+    iEcount = 1;  //reset
+    slideshowImages[0].style.display = "block";
+    slideshowImages[iTotalE-1].style.display = "none";
+  } 
+  else {
+
+    slideshowImages[iEcount].style.display = "block";
+    slideshowImages[iEcount-1].style.display = "none";
+    
+    iEcount = iEcount+1;
+  }
+
    setTimeout("fadeOut()", (duration + showtime));
 }
 

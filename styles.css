@@ -2,10 +2,10 @@ body {
 	padding: 0px;
 	margin: auto;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 12pt;
+	font-size: 14pt;
 	background-color: white;
 	color: #484848;
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 a {
@@ -29,19 +29,33 @@ p + p {
 	margin-top: 20px;
 }
 
+span {
+	white-space: nowrap;
+}
+
 #page {
 	background-color: white;
 	margin: auto;
 }
 
+#top-banner {
+	text-align: center;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
+    font-size: smaller;
+}
+
 #header {
+	display: block;
+}
+
+#header-bar {
 	display:inline-flex;
 	text-align: center;
 	background: white;
 	z-index: 100;
 	border-bottom: 1px solid #e5e5e5;
-	position: fixed;
-	top: 0;
 	width: 100%;
 }
 
@@ -64,7 +78,6 @@ p + p {
 	font-size: 14pt;
 	text-decoration: none;
 	position: absolute;
-	top: 0;
 	right: 0;
 	z-index: 10;
 	padding-top: 10px;
@@ -110,6 +123,7 @@ p + p {
 }
 
 
+
 /* 
 ***********************************************
 Responsive Header & Menu
@@ -138,8 +152,6 @@ menu hidden.
 	}
 
 	#header-menu {
-		position: absolute;
-		top: 0;
 		right: 0;
 		width: 0;
 		text-align: left;
@@ -190,7 +202,7 @@ Slide Show
 #slideshow div {
 	display:none;
 }
-#slideshow #slice1 {
+#slideshow :first-child {
 	display:block; 
 	width:100%; 
 }
@@ -203,7 +215,7 @@ Content layout
 */
 
 #content {
-	padding-top: 91px;
+	display: block;
 }
 
 .section {
@@ -240,14 +252,14 @@ Content layout
 .section-text {
 	padding: 10px;
 	width: 90%;
-	max-width: 800px; 
+	max-width: 900px; 
 	margin: auto;
 }
 
 .section-text-narrow {
 	padding: 10px;
 	width: 90%;
-	max-width: 700px; 
+	max-width: 900px; 
 	margin: auto;
 }
 
@@ -378,8 +390,7 @@ of the content would be blocked.
 .hidden-anchor {
 	display: block;
 	position: relative;
-	top: -90px;
-	
+	top: -150px;
 }
 
 #mapContainer {
@@ -502,5 +513,14 @@ This is so the footer prints with inverted colors.
 
 	.no-print {
 		display:none;
+	}
+}
+
+@media (max-width:600px) {
+	body {
+		font-size: 12pt;
+	}
+	.section-title {
+		font-size: 14pt;
 	}
 }

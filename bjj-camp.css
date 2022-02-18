@@ -1,0 +1,176 @@
+body {
+	padding: 0px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14pt;
+	background-color: white;
+	color: #484848;
+	line-height: 1.5;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+p + p {
+	margin-top: 20px;
+}
+
+span {
+	white-space: nowrap;
+}
+
+#page {
+	background-color: white;
+	margin: auto;
+}
+
+#header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/bjj-camp/belo-horizonte-sky.jpg);
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 14pt;
+    font-weight: normal;
+    padding: 20px 0px;
+	line-height: 2;
+}
+
+#header-title {
+	padding-bottom: 20px;
+	font-weight: 300;
+    font-size: 40px;
+	text-shadow: 2px 2px black;
+}
+
+#subtitle {
+	text-shadow: 2px 2px black;
+}
+
+#logo-img {
+	max-width: 300px;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.description {
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+	line-height: 1.75;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 18pt;
+	padding: 30px 20px;
+}
+
+#bjjlogos {
+	margin: auto;
+	text-align: center;
+	padding: 30px 0;
+}
+
+#bjjlogos img {
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+}
+
+#trip-to-morro {
+	width: 100%;
+	display: inline-block;
+	background-color: #efefef;
+	padding-bottom: 40px;
+}
+
+#morro-img {
+	width: 300px;
+	float: right;
+    padding: 0 0 20px 20px;
+}
+
+#extra-photos {
+	width: 100%;
+	display: inline-grid;
+}
+
+.photos {
+	display: inline-flex;
+ }
+ 
+.photos img {
+   width: 25%;
+   height: auto;
+   object-fit: cover;
+}
+
+#contact-us {
+	padding: 30px 0;
+	background-color: #efefef;
+}
+
+#contact-us-buttons {
+	text-align: center;
+	padding-bottom: 20px;
+}
+ 
+.text-button {
+	display: inline-block;
+	background-color: green;
+	width: 130px;
+	border-radius: 5px;
+	padding: 10px;
+	color: white; 
+	text-align: center;
+	font-size: 9pt;
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 12px;
+}
+
+@media (max-width:600px) {
+	body {
+		font-size: 12pt;
+	}
+
+	.section-title {
+		font-size: 14pt;
+	}
+
+	#morro-img {
+		text-align: center;
+		width: 90%;
+		float: none;
+		padding: 0 0 20px 0;
+		margin: auto;
+		display: block;
+	}
+}

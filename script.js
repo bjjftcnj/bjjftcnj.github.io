@@ -100,3 +100,41 @@ window.onpopstate = function() {
 	const hash = window.location.hash;
 	displaySection(hash.substr(1));
 }
+
+/******************************
+ Included the specified HTML 
+ into the target object 
+ ******************************/
+function loadHTML(htmlfile, sectionId) {
+
+	var target = document.getElementById(sectionId);
+    if (htmlfile) {
+		console.log("loading html")
+		/* Make an HTTP request using the attribute value as the file name: */
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			console.log(" inside onreadystatechange function");
+			if (this.readyState == 4) {
+				console.log("this.status=" + this.status);
+				if (this.status == 200) {
+					target.innerHTML = this.responseText;
+				}
+				if (this.status == 404) {
+					target.innerHTML = "Page not found.";
+				}
+				/* Remove the attribute, and call this function once more: */
+				target.removeAttribute(sectionId);
+				loadHTML();
+			}
+        
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			/* Exit the function: */
+		}
+    }
+  
+}
+
+function loadBJJCampInfo(){
+	loadHTML("bjj-camp-in-brazil.html", "content")
+}
