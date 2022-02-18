@@ -193,6 +193,7 @@ Slide Show
 ***********************************************
 */
 
+
 #slideshow {
 	opacity: 1.0;              /* CSS3 */
 	-moz-opacity: 1.0;         /* Older versions of Firefox */
@@ -523,4 +524,17 @@ This is so the footer prints with inverted colors.
 	.section-title {
 		font-size: 14pt;
 	}
+}
+
+
+
+#bjj-camp-title {
+	padding-bottom: 20px;
+	font-weight: 300;
+    font-size: 40px;
+	text-shadow: 2px 2px black;
+}
+
+#bjj-camp-subtitle {
+	text-shadow: 2px 2px black;
 }
