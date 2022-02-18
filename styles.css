@@ -113,7 +113,7 @@ span {
 	display: inline-block;
 	color: #464646;
 	text-decoration: none;
-	font-size: 10pt; 
+	font-size: 12pt; 
 	text-transform: uppercase;
 	padding: 10px;
 }
@@ -132,7 +132,7 @@ This in here in the event of a resizing
 and menu interactions that may leave the 
 menu hidden.
 */
-@media (min-width: 750px) {
+@media (min-width: 850px) {
 
 	#header-menu {
 		display: inline-block !important;
@@ -141,7 +141,7 @@ menu hidden.
 	}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
 
 	#header-image {
 		margin: auto;
