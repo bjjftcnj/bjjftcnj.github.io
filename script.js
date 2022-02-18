@@ -18,7 +18,7 @@ function hideMenu() {
     menu.style.width = "0px";
 	openIcon.style.display="inline-block";
 	closeIcon.style.display="none";
-    
+	    
 }
 
 function displaySection(sectionName) {
