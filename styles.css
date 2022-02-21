@@ -63,6 +63,16 @@ span {
 	display: none;
 }
 
+h1{
+	display: none;
+}
+
+h2 {
+	font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+}
 
 #header-image {
 	z-index: 8;
@@ -407,11 +417,12 @@ of the content would be blocked.
 	background-color: green;
 	width: 130px;
 	border-radius: 5px;
-	padding: 5px 10px;
+	padding: 10px;
 	color: white; 
 	text-align: center;
 	font-size: 9pt;
 	text-transform: uppercase;
+	margin: 5px;
 }
 
 .link-to-page {
@@ -440,7 +451,6 @@ of the content would be blocked.
 	color: green;
 }
 
-
 #private-lessons-list {
 	display: block;
 	max-width: 600px;
@@ -455,7 +465,6 @@ of the content would be blocked.
 #private-lessons-list ul li {
 	padding: 10px;
 }
-
 
 .image-group {
 	text-align: center;

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /images/bjj-camp/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /README.md
