@@ -8,6 +8,18 @@ body {
 	line-height: 1.75;
 }
 
+h1{
+	/* Must include an H1 for SEO purposes*/
+	display: none;
+}
+
+h2 {
+	font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -61,17 +73,6 @@ span {
 
 #header-sm-icons{
 	display: none;
-}
-
-h1{
-	display: none;
-}
-
-h2 {
-	font-size: inherit;
-    font-weight: inherit;
-    padding: 0;
-    margin: 0;
 }
 
 #header-image {
