@@ -94,11 +94,11 @@ In case the sections are linked
 externally, pre-load section
 ******************************/
 const hash = window.location.hash;
-displaySection(hash.substr(1));
+displaySection(hash.substring(1));
 
 window.onpopstate = function() {
 	const hash = window.location.hash;
-	displaySection(hash.substr(1));
+	displaySection(hash.substring(1));
 }
 
 /******************************
