@@ -138,3 +138,4 @@ function loadHTML(htmlfile, sectionId) {
 function loadBJJCampInfo(){
 	loadHTML("bjj-camp-in-brazil.html", "content")
 }
+

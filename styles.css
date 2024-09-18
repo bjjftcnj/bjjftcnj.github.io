@@ -367,24 +367,34 @@ Schedule iframe
 	text-align: center;
 	overflow: hidden;
 	height: 500px;
-	margin: 0;
+	margin: auto;
+    width: 100%;
+    max-width: 900px;
 
 }
 
 #schedule-iframe{
-	margin: 0;
-	max-width: 800px;
-	width: 100%;
-	height: 100vh;
+	margin: auto;
+	max-width: 1100px;
+	width: 90%;
+	height: 500px;
 	border: 0;
 	padding: 0 0 0 0;
 
 }  
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 
 	#schedule-section {
 		padding:0;
+	}
+	#schedule-container {
+		overflow:unset;
+		overflow-y: clip;
+		overflow-x: scroll;
+	}
+	#schedule-iframe{
+		width: 800px;
 	}
 }
 
