@@ -95,6 +95,7 @@ span {
 .section-title {
 	text-align: center;
 	font-size: 18pt;
+	font-weight: bold;
 	padding: 30px 20px;
 }
 
@@ -214,4 +215,33 @@ span {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 20vw);
 	}
+}
+
+@media print {
+
+    .pagebreak { 
+		page-break-before: always; 
+	} 
+	
+	@page
+	{
+		margin: 65px 50px;
+		
+	}
+
+	#extra-photos {
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+	}
+
+	.hide-from-printing {
+		display: none;
+	}
+
+	#contact-us {
+		background-color: white;
+	}
+	
+	
 }

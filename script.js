@@ -28,19 +28,24 @@ function displaySection(sectionName) {
 	const CLASSESSUBTAGS = ["private-classes","bjj-kids-teens"];
 	
 	let sectionTag = "";
+	let isSubtag = false;
 	
-	if (sectionName==='' || ALLTAGS.indexOf(sectionName)===-1)
+	// Validate if section is valid. If not, default to home page.
+	// This will eliminate any display errors in bad URLs
+	if (sectionName==='' || ALLTAGS.indexOf(sectionName)===-1) {
 		sectionTag= HOMEPAGETAG;
+	}
 	else {
-		if (CLASSESSUBTAGS.indexOf(sectionName)!= -1)
+		if (CLASSESSUBTAGS.indexOf(sectionName)!= -1) {
+			isSubtag = true;
 			sectionTag = "our-classes-section";
+		}
 		else 
 			sectionTag = sectionName + "-section";
-		
 	}
 
+	// Display only the section that was selected. Hide all others.
 	let allSections = document.getElementsByClassName("section")
-
 	for (i = 0; i < allSections.length; i++) { 
 		var section = allSections[i]
 		if (section.id === sectionTag)
@@ -49,11 +54,26 @@ function displaySection(sectionName) {
 			section.style.display='none';
 	}
 
-	//Scroll to top if not subtags
-	if (CLASSESSUBTAGS.indexOf(sectionName)=== -1) {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
+	// This will scroll the subTag section to the top of the 
+	// browser page, and each top levelsection to under the 
+	// header. Since we do not use sticky headers we want
+	// to scroll subSections to the top of the browser page.
+	let element = document.getElementById(sectionName); 
+	if (isSubtag) 
+		element.style.top = "0";
+	else 
+		element.style.top = "-150px";
+	
+
+	// Scrolls to top if homepage.
+	// This is necessary only if we use sticky headers.
+	// We did for a while, but removed stickiness
+	// because it took up too much screen realestate 
+	// on mobile and desktop browsers. Bad user experience.
+	// if (sectionTag === HOMEPAGETAG) {
+	//	document.body.scrollTop = 0;
+	//	document.documentElement.scrollTop = 0;
+	//}
 
 }
 
@@ -101,41 +121,4 @@ window.onpopstate = function() {
 	displaySection(hash.substring(1));
 }
 
-/******************************
- Included the specified HTML 
- into the target object 
- ******************************/
-function loadHTML(htmlfile, sectionId) {
-
-	var target = document.getElementById(sectionId);
-    if (htmlfile) {
-		console.log("loading html")
-		/* Make an HTTP request using the attribute value as the file name: */
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			console.log(" inside onreadystatechange function");
-			if (this.readyState == 4) {
-				console.log("this.status=" + this.status);
-				if (this.status == 200) {
-					target.innerHTML = this.responseText;
-				}
-				if (this.status == 404) {
-					target.innerHTML = "Page not found.";
-				}
-				/* Remove the attribute, and call this function once more: */
-				target.removeAttribute(sectionId);
-				loadHTML();
-			}
-        
-			xhttp.open("GET", file, true);
-			xhttp.send();
-			/* Exit the function: */
-		}
-    }
-  
-}
-
-function loadBJJCampInfo(){
-	loadHTML("bjj-camp-in-brazil.html", "content")
-}
 

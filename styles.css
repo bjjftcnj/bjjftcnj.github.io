@@ -59,7 +59,7 @@ span {
 }
 
 #header {
-	display: block;
+	display: inline;
 }
 
 #header-bar {
