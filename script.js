@@ -54,15 +54,11 @@ function displaySection(sectionName) {
 			section.style.display='none';
 	}
 
-	// Scrolls to top if homepage.
-	// This is necessary only if we use sticky headers.
-	// We did for a while, but removed stickiness
-	// because it took up too much screen realestate 
-	// on mobile and desktop browsers. Bad user experience.
-	// if (sectionTag === HOMEPAGETAG) {
-	//	document.body.scrollTop = 0;
-	//	document.documentElement.scrollTop = 0;
-	//}
+	//Scroll to top if not subtags
+	if (CLASSESSUBTAGS.indexOf(sectionName)=== -1) {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
 
 }
 
