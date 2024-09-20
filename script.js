@@ -54,17 +54,6 @@ function displaySection(sectionName) {
 			section.style.display='none';
 	}
 
-	// This will scroll the subTag section to the top of the 
-	// browser page, and each top levelsection to under the 
-	// header. Since we do not use sticky headers we want
-	// to scroll subSections to the top of the browser page.
-	let element = document.getElementById(sectionName); 
-	if (isSubtag) 
-		element.style.top = "0";
-	else 
-		element.style.top = "-150px";
-	
-
 	// Scrolls to top if homepage.
 	// This is necessary only if we use sticky headers.
 	// We did for a while, but removed stickiness

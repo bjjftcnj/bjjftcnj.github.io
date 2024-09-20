@@ -410,6 +410,12 @@ of the content would be blocked.
 	top: -150px;
 }
 
+.hidden-anchor-subsection {
+	display: block;
+	position: relative;
+	top: 1px;
+}
+
 #mapContainer {
 	width: 95%;
 	margin: auto;
