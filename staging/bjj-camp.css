@@ -1,0 +1,247 @@
+body {
+	padding: 0px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14pt;
+	background-color: white;
+	color: #484848;
+	line-height: 1.5;
+	width: 100%;
+}
+
+h1{
+	/* Must include an H1 for SEO purposes*/
+	display: none;
+}
+
+h2 {
+	font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+p + p {
+	margin-top: 20px;
+}
+
+span {
+	white-space: nowrap;
+}
+
+#page {
+	background-color: white;
+	margin: auto;
+}
+
+#header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/bjj-camp/belo-horizonte-sky.jpg);
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 14pt;
+    font-weight: normal;
+    padding: 20px 0px;
+	line-height: 2;
+}
+
+#header-title {
+	font-weight: 400;
+    font-size: 40px;
+	text-shadow: 2px 2px black;
+}
+
+#subtitle {
+	font-size: 20px;
+	text-shadow: 2px 2px black;
+	padding-bottom: 20px;
+}
+
+#logo-img {
+	max-width: 200px;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.description {
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+	line-height: 1.75;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 18pt;
+	font-weight: bold;
+	padding: 30px 20px;
+}
+
+#bjjlogos {
+	margin: auto;
+	text-align: center;
+	padding: 30px 0;
+}
+
+#bjjlogos img {
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+}
+
+
+#morro-img {
+	width: 300px;
+	float: right;
+    padding: 20px ;
+}
+
+#ftc-team-logo {
+	width: 150px;
+	float: left;
+	padding: 20px;
+}
+
+#extra-photos {
+	overflow: hidden;
+	padding: 40px 0;
+	width: 100%;
+}
+
+.photos {
+	background-color: black;
+	max-width: 1600px;
+	display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 12vw);
+ }
+ 
+.photos img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contact-us {
+	padding: 30px 0;
+	background-color: #efefef;
+}
+
+#contact-us-buttons {
+	text-align: center;
+	padding-bottom: 20px;
+}
+ 
+.text-button {
+	display: inline-block;
+	background-color: green;
+	width: 130px;
+	border-radius: 5px;
+	padding: 10px;
+	color: white; 
+	text-align: center;
+	font-size: 9pt;
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 12px;
+}
+
+@media (max-width:750px) {
+	body {
+		font-size: 12pt;
+	}
+
+	#header-title {
+		font-size: 35px;
+	}
+
+	#subtitle {
+		font-size: 14pt;
+	}
+
+	.section-title {
+		font-size: 14pt;
+	}
+
+	#morro-img {
+		text-align: center;
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		object-position: top;
+		float: none;
+		padding: 0 0 20px 0;
+		margin: auto;
+		display: block;
+	}
+
+	#ftc-team-logo {
+		float: none;
+		padding-top: 0;
+		display: block;
+		margin: auto;
+	}
+
+	.photos {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 20vw);
+	}
+}
+
+@media print {
+
+    .pagebreak { 
+		page-break-before: always; 
+	} 
+	
+	@page
+	{
+		margin: 65px 50px;
+		
+	}
+
+	#extra-photos {
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+	}
+
+	.hide-from-printing {
+		display: none;
+	}
+
+	#contact-us {
+		background-color: white;
+	}
+	
+	
+}
