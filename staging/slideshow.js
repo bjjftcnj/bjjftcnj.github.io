@@ -2,7 +2,7 @@
 var element = document.getElementById("slideshow");
 var duration = 500; /* fade duration in millisecond */
 var hidtime = 200; /* time to stay hidden */
-var showtime = 5000; /* time to stay visible */
+var showtime = 3000; /* time to stay visible */
 
 var running = 0 /* Used to check if fade is running */
 var iEcount = 1 /* Element Counter */

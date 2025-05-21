@@ -3,9 +3,9 @@ function displayMenu() {
 	var closeIcon = document.getElementById('menu-close-icon');
 	var openIcon = document.getElementById('menu-open-icon');
 
-    menu.style.transition = '0.5s';
-    menu.style.width = "200px";
-    openIcon.style.display="none";
+	menu.style.transition = '0.5s';
+	menu.style.width = "200px";
+	openIcon.style.display="none";
 	closeIcon.style.display="inline-block";
 }
 
@@ -15,20 +15,20 @@ function hideMenu() {
 	var openIcon = document.getElementById('menu-open-icon');
 
 	menu.style.transition = '0.5s';
-    menu.style.width = "0px";
+	menu.style.width = "0px";
 	openIcon.style.display="inline-block";
-	closeIcon.style.display="none";
-	    
+	closeIcon.style.display="none";	    
 }
+
 
 function displaySection(sectionName) {
 
 	const HOMEPAGETAG="welcome-to-ftc-section";
-	const ALLTAGS=["welcome-to-ftc","our-classes", "class-schedule", "contact-us", "about-the-academy", "professor-marcelo-oliveira","private-classes","bjj-kids-teens"];
-	const CLASSESSUBTAGS = ["private-classes","bjj-kids-teens"];
+	const ALLTAGS=["welcome-to-ftc", "professor-john-toribio", "class-schedule", "contact-us", "about-the-academy", "professor-marcelo-oliveira","our-classes","private-classes","bjj-kids-teens", "secaucus-schedule"];
+	const CLASSESSUBTAGS = ["our-classes","private-classes","bjj-kids-teens"];
+  const SCHEDULESUBTAGS = ["secaucus-schedule"]
 	
 	let sectionTag = "";
-	let isSubtag = false;
 	
 	// Validate if section is valid. If not, default to home page.
 	// This will eliminate any display errors in bad URLs
@@ -36,10 +36,10 @@ function displaySection(sectionName) {
 		sectionTag= HOMEPAGETAG;
 	}
 	else {
-		if (CLASSESSUBTAGS.indexOf(sectionName)!= -1) {
-			isSubtag = true;
-			sectionTag = "our-classes-section";
-		}
+		if (CLASSESSUBTAGS.indexOf(sectionName)!= -1) 
+			sectionTag = "about-the-academy-section";
+    else if (SCHEDULESUBTAGS.indexOf(sectionName) != -1)
+      sectionTag = "class-schedule-section"
 		else 
 			sectionTag = sectionName + "-section";
 	}
@@ -54,7 +54,10 @@ function displaySection(sectionName) {
 			section.style.display='none';
 	}
 
-	//Scroll to top if not subtags
+	// Scroll to top if not subsection. 
+	// This is necessary because we are using hidden divs
+	// and the browser will stay in the location of the 
+	// last div even if the div is hidden.
 	if (CLASSESSUBTAGS.indexOf(sectionName)=== -1) {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
@@ -106,4 +109,9 @@ window.onpopstate = function() {
 	displaySection(hash.substring(1));
 }
 
-
+function openSecaucus() {
+  if (!navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    window.location.href = 'https://www.google.com/maps/search/?api=1&query=North Bergen, NJ';
+    return false; // Prevent default link behavior
+  }
+}

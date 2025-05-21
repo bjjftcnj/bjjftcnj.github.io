@@ -21,13 +21,6 @@ function hideMenu() {
 }
 
 
-function manageSections(topLevelSection) {
-
-
-}
-
-
-
 function displaySection(sectionName) {
 
 	const HOMEPAGETAG="welcome-to-ftc-section";
